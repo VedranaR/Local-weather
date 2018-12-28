@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <!-- import Font awesome -->
+    <!-- include Font awesome -->
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
@@ -13,13 +13,13 @@
       crossorigin="anonymous"
     />
 
-    <!--import Bootswatch-->
+    <!--include Bootswatch-->
     <link
       rel="stylesheet"
       href="https://bootswatch.com/4/minty/bootstrap.min.css"
     />
 
-    <!-- import Bootstrap -->
+    <!-- include Bootstrap -->
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -38,6 +38,23 @@
     <title>Local weather</title>
   </head>
   <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 mx-auto text-center bg-primary mt-5 p-5 rounded">
+          <h1 id="w-location"></h1>
+          <h3 class="text-dark" id="description"></h3>
+          <h3 id="subdesc"></h3>
+          <img id="icon" />
+          <ul id="details" class="list-group mt3">
+            <li class="class-group-item" id="humidity"></li>
+            <li class="class-group-item" id="dewpoint"></li>
+            <li class="class-group-item" id="feels-like"></li>
+            <li class="class-group-item" id="wind"></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
     <script src="storage.js"></script>
     <script src="weather.js"></script>
     <script src="ui.js"></script>
