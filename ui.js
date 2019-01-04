@@ -17,7 +17,9 @@ class UI {
     this.description.textContent = weather.weather[0].name;
     this.subdescription.textContent = weather.weather[0].description;
     // this.icon.setAttribute("src", weather.weather[0].icon);
-    this.temperature.textContent = `${weather.main.temp - 273.15} °C`;
+    this.temperature.textContent = `${(weather.main.temp - 273.15).toFixed(
+      2
+    )} °C`;
     this.humidity.textContent = weather.main.humidity;
     this.pressure.textContent = weather.main.pressure;
     this.wind.textContent = `${weather.wind.speed} m/s`;
