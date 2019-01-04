@@ -17,11 +17,13 @@ class UI {
     this.description.textContent = weather.weather[0].name;
     this.subdescription.textContent = weather.weather[0].description;
     // this.icon.setAttribute("src", weather.weather[0].icon);
-    this.temperature.textContent = `${(weather.main.temp - 273.15).toFixed(
-      2
-    )} °C`;
-    this.humidity.textContent = weather.main.humidity;
-    this.pressure.textContent = weather.main.pressure;
-    this.wind.textContent = `${weather.wind.speed} m/s`;
+    this.temperature.textContent = `Temperature: ${(
+      weather.main.temp - 273.15
+    ).toFixed(2)} °C (${weather.main.temp} °K)`;
+    this.humidity.textContent = `Humidity: ${weather.main.humidity} %`;
+    this.pressure.textContent = `Atmospheric pressure: ${
+      weather.main.pressure
+    } hPa`;
+    this.wind.textContent = `Wind: ${weather.wind.speed} m/s`;
   }
 }
