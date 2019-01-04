@@ -1,5 +1,13 @@
+//Initializing local storage
+const storage = new Storage();
+
+//Get the location data stored in the LS
+const weatherLocation = storage.getLocationData();
+
 //create the weather object
-const weather = new Weather(city, country);
+const weather = new Weather(weatherLocation.city, weatherLocation.country);
+
+//Initializing UI
 const ui = new UI();
 
 //Get the weather info on DOM load
