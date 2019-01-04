@@ -16,7 +16,10 @@ class UI {
     this.country.textContent = weather.sys.country;
     this.description.textContent = weather.weather[0].name;
     this.subdescription.textContent = weather.weather[0].description;
-    // this.icon.setAttribute("src", weather.weather[0].icon);
+    this.icon.setAttribute(
+      "src",
+      `http://openweathermap.org/img/w/${weather.weather[0].icon}.png`
+    );
     this.temperature.textContent = `Temperature: ${(
       weather.main.temp - 273.15
     ).toFixed(2)} °C (${weather.main.temp} °K)`;
